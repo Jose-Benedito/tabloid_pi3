@@ -1,6 +1,11 @@
 from website import create_app
 import os
 
+import logging
+
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
 app = create_app()
 
 def pagina_no_encontrada(error):
