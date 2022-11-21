@@ -68,10 +68,9 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
 
-           # comercio = Estabelecimentos(nome=nome_mercado)
-          #  db.session.add(comercio)
-         #   db.session.commit()
-            #login_user(user, remember=True)
+           
+        
+            login_user(user, remember=True)
             flash('conta criado com sucesso!', category='success')
             return redirect(url_for('views.home'))
 
