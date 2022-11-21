@@ -1,12 +1,12 @@
 from website import create_app
-import os
+import os, sys
 
 import logging
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
 
 app = create_app()
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 def pagina_no_encontrada(error):
     return "<h1>A página que procura no existe...</h1>",404
