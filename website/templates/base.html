@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tabloide Digital</title>
+  <title>HomePageTabloide</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,77 +15,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
     
-<<<<<<< HEAD
-    <title>{% block title %}Home{% endblock %}</title>
-
-</head>
-
-<body>  
-<nav class="navbar navbar-expand-lg navbar">
-    
-    <button 
-    class="navbar-toggler" 
-    type="button" 
-    data-toggle="collapse" 
-    data-target="#navbar"
-    >
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbar">
-        <div class="navbar-nav">
-            {% if user.is_authenticated %}
-            <a class="nav-item nav-link" id="admin" href="/admin">Administrativo</a>
-            <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-            
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Comércios
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="/ateliedehlicias">Atelie Dehlicias</a>
-                  <a class="dropdown-item" href="/emporioct">Emporio CT</a>
-                  <a class="dropdown-item" href="/mercadoc">Mercado C</a>
-                </div>
-                </div>
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Serviços
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="/esmalterialily">Esmalteria Lily</a>
-                      <a class="dropdown-item" href="/stylushair">Stylus Hair</a>
-                </div>
-                </div>
-
-            {% else %}
-            <a class="nav-item nav-link" id="home" href="/">Home</a>
-            <a class="nav-item nav-link" id="login" href="/login">Login</a>
-            <a class="nav-item nav-link" id="signUp" href="/cadastro">Cadastre-se</a>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Comércios
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="/ateliedehlicias">Atelie Dehlicias</a>
-                  <a class="dropdown-item" href="/emporioct">Emporio CT</a>
-                  <a class="dropdown-item" href="/mercadoc">Mercado C</a>
-                </div>
-                </div>
-                  
-           <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Serviços
-                    </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="/esmalterialily">Esmalteria </a>
-                      <a class="dropdown-item" href="/stylushair">Stylus Hair" </a>                     
-                </div>
-                </div>
-                    
-           {% endif %}
-        </div>
-=======
   
 
 </head>
@@ -147,7 +76,7 @@
 	
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/cadastro"><span class="glyphicon glyphicon-log-in"></span>Cadastro</a></li>
+        <li><a href="/cadastro"><span class="glyphicon glyphicon-log-in"></span>CADASTRO</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
@@ -155,7 +84,6 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span>Sair</a></li>
       </ul>
->>>>>>> d8033b22bfe3088f9edf327acd514a84995850e8
     </div>
   </div>
 </nav>
@@ -188,15 +116,6 @@
     <div class="container">
         {% block content %}
 
-<<<<<<< HEAD
-    {% block content %}
-    {% endblock %}
-    
-    
-</main>
-    
-    
-=======
 
 
 
@@ -206,7 +125,6 @@
     </footer>
     </body>
     </html>
->>>>>>> d8033b22bfe3088f9edf327acd514a84995850e8
     
 
 </head>
