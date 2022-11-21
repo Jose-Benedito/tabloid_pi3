@@ -70,7 +70,7 @@ def sign_up():
 
            
         
-            login_user(user, remember=True)
+            #login_user(user, remember=True)
             flash('conta criado com sucesso!', category='success')
             return redirect(url_for('views.home'))
 
