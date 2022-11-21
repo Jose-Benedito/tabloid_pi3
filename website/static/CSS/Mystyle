@@ -1,1 +1,23 @@
 git 
+/* Adicione uma cor de fundo cinza e algum preenchimento ao rodapé */
+footer {
+  background-color: #FAEBD7;
+  padding: 25px;
+}
+
+.carousel-inner img {
+  width: 25%; /* Set width to 25% */
+  min-height: 200px;
+}
+p {
+  
+  font-size: 1.2em;
+  line-height: 32px;
+}
+
+/* Oculte o texto do carrossel quando a tela tiver menos de 600 pixels de largura */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; 
+  }
+}
