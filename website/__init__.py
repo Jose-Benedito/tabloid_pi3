@@ -11,7 +11,7 @@ DB_NAME = "database.db" # para o sqlite
 DB_POSTGRES = "dip57lu764jvhbqp5tjry7mkyfi"
 USER = 'app_rw_dciptanihirr6ym5z34g7qy2lq'
 PASSWORD = 'VELVD1RL9EgBafHRQTL0Dke8KrqCLdFv'
-HOST = 'pg-tunnel.borealis-data.com:65411'
+HOST = '@pg-tunnel.borealis-data.com:65411'
 
 
 def create_app():
@@ -21,7 +21,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
  
  #Postgres
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{USER}:{PASSWORD}@{HOST}:65411/{DB_POSTGRES}'
+    #app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{USER}:{PASSWORD}@{HOST}:65411/{DB_POSTGRES}'
     db.init_app(app)
 
 
@@ -49,7 +49,7 @@ def create_app():
 
     from .models import User, Comercios_item, Estabelecimentos, Servicos
 
-    create_database(app)
+    'create_database(app)'
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
@@ -60,14 +60,14 @@ def create_app():
         return User.query.get(int(id))
     
     with app.app_context():
-        db.create_all()        
+         db.create_all()        
        
        
-        return app
+         return app
     def create_database(app):
         db.create_all(app=app)  
-        if not path.exists('website/' + DB_NAME):
-           db.create_all(app=app)
-           print('Created Database')
+    if not path.exists('website/' + DB_NAME):
+       db.create_all(app=app)
+       print('Created Database')
 
    
