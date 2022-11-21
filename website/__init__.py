@@ -8,10 +8,10 @@ db = SQLAlchemy()
 
 DB_NAME = "database.db" # para o sqlite
 
-DB_POSTGRES = "dip57lu764jvhbqp5tjry7mkyfi"
-USER = 'app_rw_dciptanihirr6ym5z34g7qy2lq'
-PASSWORD = 'VELVD1RL9EgBafHRQTL0Dke8KrqCLdFv'
-HOST = '@pg-tunnel.borealis-data.com:65411'
+DB_POSTGRES = "dcm1f52qgu8lpj"
+USER = 'ysexmmzaawgzzo'
+PASSWORD = '233ebacda40b1e0000931d9d8d17a14dfbb9a723a9101ec5567b87662c5b0eb7'
+HOST = 'ec2-3-227-68-43.compute-1.amazonaws.com'
 
 
 def create_app():
@@ -21,7 +21,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
  
  #Postgres
-    #app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{USER}:{PASSWORD}@{HOST}:65411/{DB_POSTGRES}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{USER}:{PASSWORD}@{HOST}:5432/{DB_POSTGRES}'
     db.init_app(app)
 
 
