@@ -106,8 +106,8 @@ def admin():
 #-----------------------------------------------------------------------
 @views.route('/cadastro')
 def teste():
-    return "olá está funcionando"
-    #return render_template("cadastro.html", user=current_user)
+    
+    return render_template("cadastro.html", user=current_user)
 
 @views.route('/form/<id>', methods=['GET','POST'])
 def form(id):
