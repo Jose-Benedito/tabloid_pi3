@@ -28,8 +28,8 @@ class Estabelecimentos(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(150))
     endereco = db.Column(db.String(150))
-    telefone = db.Column(db.String)
-    hora_func = db.Column(db.String)
+    telefone = db.Column(db.String(120))
+    hora_func = db.Column(db.String(120))
     descricao = db.Column(db.Text)
     foto = db.Column(db.Text)
     fotob = db.Column(db.Text)
@@ -89,7 +89,7 @@ class Comercios_item(db.Model, UserMixin):
 
 class Servicos(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    tipo = db.Column(db.String)
+    tipo = db.Column(db.String(150))
     descricao = db.Column(db.String(150))
     valor = db.Column(db.String(150))
     horario_func = db.Column(db.String(150))

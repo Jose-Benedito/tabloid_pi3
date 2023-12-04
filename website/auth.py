@@ -64,7 +64,7 @@ def sign_up():
             flash('Senhas não correspondentes', category='error')
         else:
             # add user to database
-            new_user = User(email=email, cnpj=cnpj, password=generate_password_hash(password1,  method='sha256'))
+            new_user = User(email=email, cnpj=cnpj, password=password1)#generate_password_hash(password1,  method='sha256'))
             db.session.add(new_user)
             db.session.commit()
 

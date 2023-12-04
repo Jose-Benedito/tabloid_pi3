@@ -6,19 +6,25 @@ from flask_sqlalchemy import SQLAlchemy
 # iniciando o banco de dados
 db = SQLAlchemy()
 
-DB_NAME = "database.db" # para o sqlite
-#DB_POSTGRES = ""
-#USER = ''
-#PASSWORD = ''
-#HOST = ''
+#DB_NAME = "database.db" # para o sqlite
+DB = "tabloid"
+USER = 'benethowen'
+PASSWORD = 'JBMjsbach123'
+HOST = 'benethowen.mysql.database.azure.com'
 
 def create_app():
     app = Flask(__name__)
  #Sqlite configuração
-    app.config['SECRET_KEY'] = 'grhteyeuwhhs fgdhjajakuww'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+  #  app.config['SECRET_KEY'] = 'grhteyeuwhhs fgdhjajakuww'
+  #  app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
  #Postgres
  #   app.config['SQLALCHEMY_DATABASE_URI']=f'postgresql://{USER}:{PASSWORD}@{HOST}:5432/{DB_POSTGRES}'
+#    #SqlAlchemy Database Configuration With Mysql
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://{USER}:{PASSWORD}@{HOST}/{DB}'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+ 
+ 
+   # db = SQLAlchemy(app)  
     db.init_app(app)
 
 
