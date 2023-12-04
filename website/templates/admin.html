@@ -43,7 +43,7 @@
           </div>
                 <div class="form-group">
                     
-                    <input type="hidden" class="form-control" id="user" name="user" value="{{ user.id }}">
+                    <input type="hidden" class="form-control" id="user" name="user" value="{{ user.id}}">
                 </div>
             
                 <button type="submit" class="btn btn-primary" onclick="return valida_estab()">Submit</button>
@@ -76,7 +76,7 @@
               <div class="col-md-12 ">
                   <button class="btn btn-primary preview" type="button" ><a href="/editar/{{ user.id }}">Edição de itens</a></button>
                   <button class="btn btn-success preview" type="button" ><a href="/form/{{ user.id }}">Cadastrar Itens</a></button>
-                  <button class="btn btn-success preview" type="button" ><a href="/form_servico/{{ user.id }}">Cadastrar serviços</a></button>
+                  <button class="btn btn-success preview" type="button" ><a href="/form_servico/{{ negocio.id }}">Cadastrar serviços</a></button>
               </div>
         </div>
         
